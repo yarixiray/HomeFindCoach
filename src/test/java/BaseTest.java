@@ -6,8 +6,12 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
 
 public class BaseTest {
-    protected static WebDriver driver;
+    protected WebDriver driver;
     protected String baseUrl = "http://skillsup.ua/";
+
+    public WebDriver getWebdriver() {
+        return driver;
+    }
 
     @Before
     public void setUp() {
